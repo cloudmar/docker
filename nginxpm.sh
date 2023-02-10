@@ -1,8 +1,10 @@
 # nginx proxy manager
 
-echo "install nginx proxy manager"
+echo "install nginx proxy manager setup"
 
 sudo mkdir nginxpm && cd nginxpm
+
+sudo mkdir /var/lib/mysql 
 
 sudo cat > docker-compose.yml << EOF
 version: '3'
@@ -33,7 +35,9 @@ services:
       - ./data/mysql:/var/lib/mysql
 EOF
 
-echo "check docker-compose.yml file to change database user and password"
+sudo cd nginxpm
+
+echo "run: nano docker-compose.yml file to change database user and password"
 
 echo "run: sudo docker-compose up -d"
 
