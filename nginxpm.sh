@@ -7,6 +7,7 @@ sudo mkdir nginxpm && cd nginxpm
 sudo mkdir /var/lib/mysql 
 
 sudo cat > docker-compose.yml << EOF
+#default user is admin@example.com and password is changeme
 version: '3'
 services:
   app:
@@ -42,6 +43,8 @@ echo "run: nano docker-compose.yml file to change database user and password"
 echo "run: sudo docker-compose up -d"
 
 echo "default user is admin@example.com and password is changeme"
+
+
 
 
 
