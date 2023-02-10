@@ -51,7 +51,7 @@ services:
       MYSQL_USER: '$user'
       MYSQL_PASSWORD: '$password'
     volumes:
-      - ./data/mysql: /var/lib/mysql
+      - ./data/mysql:/var/lib/mysql
 EOF
 
 sudo docker-compose up -d
