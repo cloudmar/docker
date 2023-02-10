@@ -2,6 +2,7 @@
 # nginx proxy manager
 
 echo "cloudmar 1.0"
+
 echo "nginx proxy manager install setup"
 
 sudo mkdir nginxpm && cd nginxpm
@@ -15,12 +16,12 @@ while [[ ("$dbname" == "")]];
 do read -p "Enter your database name for nginx proxy manager: " dbname
 done
 
-while [[ ("$dbname" == "")]];
-do read -p "Enter your database name for nginx proxy manager: " user
+while [[ ("$user" == "")]];
+do read -p "Enter your database username for nginx proxy manager: " user
 done
 
-while [[ ("$dbname" == "")]];
-do read -p "Enter your database name for nginx proxy manager: " password
+while [[ ("$password" == "")]];
+do read -p "Enter your database password for nginx proxy manager: " password
 done
 
 sudo cat > docker-compose.yml << EOF
@@ -55,7 +56,9 @@ EOF
 
 sudo docker-compose up -d
 
+echo "go to EXTERNALIP:81 to login"
 echo "default user is admin@example.com and password is changeme"
+echo "enjoy ;)"
 
 
 
