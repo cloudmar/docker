@@ -1,3 +1,6 @@
+mkdir elasticsearch && cd elasticsearch
+
+cat > docker-compose.yml << EOF
 version: '2.2'
 
 services:
@@ -34,3 +37,8 @@ services:
 volumes:
   esdata1:
     driver: local
+
+EOF
+
+docker-compose up -d
+
