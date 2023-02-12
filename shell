@@ -1,1 +1,0 @@
-docker update --restart unless-stopped $(docker ps -q)
