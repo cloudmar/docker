@@ -1,4 +1,10 @@
+# install elasticsearch
+
 mkdir elasticsearch && cd elasticsearch
+
+sudo echo "vm.max_map_count=262144" >> /etc/sysctl.conf
+
+sudo sysctl -w vm.max_map_count=262144
 
 cat > docker-compose.yml << EOF
 version: '2.2'
